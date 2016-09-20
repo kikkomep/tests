@@ -1,4 +1,6 @@
 FROM java
 
 ADD HelloWorld.java /
-ENTRYPOINT ["javac","HelloWorld.java"]
+RUN javac HelloWorld.java
+
+ENTRYPOINT ["java","HelloWorld", "DockerContainer"]
